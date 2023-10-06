@@ -1,0 +1,97 @@
+---
+---
+
+<!--
+v8 // Tue Jul  5 9:45, remove "disabled" buttons
+v7 // Tue Dec  8 21:10:08 CET 2020 ; for patents, howpublished is not a URL
+-->
+
+{% assign badgeWidth = "125px" %}
+{% assign  btnHeight = "30px" %}
+<abbr><strong><a name="{{key | regex: '^DR:', '' }}"></a>[{{key | regex: '^DR:', '' }}]</strong></abbr>
+{{ entry.author }}, 
+
+
+<!-- assume patents @misc{...PATENT...} -->
+{% if entry.type == "misc" and entry.key contains "PATENT" %} 
+		 <em> "{{ entry.title }}" </em>, {{ entry.howpublished }} {{ entry.note }}  
+
+{% else %}
+		{% if entry.howpublished %}
+			<i class="fa fa-file-pdf-o" aria-hidden="true" href="{{entry.howpublished}}"></i> 
+			<a href="{{entry.howpublished}}" > <em> "{{ entry.title }}" </em></a>
+		{% elsif entry.arxiv %}
+			<i class="fa fa-file-pdf-o" aria-hidden="true" href="{{entry.arxiv}}"></i> 
+			<a href="{{entry.arxiv}}" > <em> "{{ entry.title }}" </em></a>
+	    {% else %}
+	    	"{{ entry.title }}" 
+		{% endif %}
+{% endif %}
+
+
+<em>
+{% if entry.type == "article" %}
+	{% if entry.journal %} In {{ entry.journal }}, {% endif %}	   
+	{% if entry.volume  %} Vol. {{ entry.volume }}, {% endif %}	   
+	{% if entry.number  %} No. {{ entry.number }}, {% endif %}	   
+	{% if entry.pages   %} pp.{{ entry.pages }}, {% endif %}	   
+
+{% elsif entry.type == "inbook" %}
+	{% if entry.journal %} In {{ entry.booktitle }}, {% endif %}	   
+	{% if entry.volume  %} Vol. {{ entry.volume }}, {% endif %}	   
+	{% if entry.number  %} No. {{ entry.number }}, {% endif %}	   
+	{% if entry.pages   %} pp.{{ entry.pages }}, {% endif %}	   
+	
+{% elsif entry.type == "inproceedings" %}
+	{% if entry.booktitle %}   {{ entry.booktitle }} {% endif %}	   
+
+{% elsif entry.type == "incollection" %}
+	{% if entry.booktitle %}   {{ entry.booktitle }} {% endif %}	   
+
+{% elsif entry.type contains "techrep" %}
+	{% if entry.institution %}     {{ entry.institution }} {% endif %}	   
+	
+{% elsif entry.type contains "thesis %}
+	{% if entry.institution %}     {{ entry.institution }} {% endif %}	   
+	{% if entry.school %}          {{ entry.school }}      {% endif %}	   
+	{% if entry.address %}         {{ entry.address }}     {% endif %}	   
+{% endif %}</em>
+
+{% if entry.note contains "bestpaper"  %} {% icon fa fa-star %} {% endif %}	  
+{% if entry.month %} {{ entry.month }}. {% endif %}	   
+{% if entry.year %} {{ entry.year }}, {% endif %}	   
+{% if entry.doi %} DOI {{ entry.doi }} {% endif %}	   
+
+
+{% if entry.type == "article" %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}">Journal</span>
+
+{% elsif entry.type == "inbook" %}
+	<span class="badge badge-pill btn-info" style="width: {{ badgeWidth }}">Bookch</span>
+
+{% elsif entry.type == "inproceedings" %}
+	<span class="badge badge-pill btn-success" style="width: {{ badgeWidth }}">Conference</span>
+
+{% elsif entry.key contains "PATENT" %}
+	<span class="badge badge-pill btn-danger" style="width: {{ badgeWidth }}">Patent</span>
+
+{% elsif entry.type contains "theses" %}
+	<span class="badge badge-pill btn-secondary" style="width: {{ badgeWidth }}">Thesis</span>
+	
+{% elsif entry.type contains "techrep" %}
+	<span class="badge badge-pill btn-secondary" style="width: {{ badgeWidth }}">Tech.Rep.</span>
+{% endif %} 
+
+{% if entry.note contains "bestpaperrunnerup"  %}
+		<span class="badge badge-pill btn-warning" style="width: {{ badgeWidth }}"> {% icon fa fa-star %} Runner-up  </span>
+{% elsif  entry.note contains "bestpaper" %}	
+		<span class="badge badge-pill btn-warning" style="width: {{ badgeWidth }}"> {% icon fa fa-star %} Award  </span>
+{% endif %}	   
+
+
+{% if entry.arxiv  %} <span class="badge badge-pill btn btn-outline-dark" style="width: {{ badgeWidth }}"> <a href="{{ entry.arxiv }}"> arXiv <i class="fa fa-external-link"></i></a> </span>  {% endif %}	
+
+
+{% if entry.dataseturl %} <span class="badge badge-pill btn btn-outline-dark" style="width: {{ badgeWidth }}">   <a href="{{ entry.dataseturl }}"> {% icon fa-cube %} Data <i class="fa fa-external-link"></i></a> </span>  {% endif %}	
+ 
+{% if entry.demourl %} <span class="badge badge-pill btn btn-outline-dark" style="width: {{ badgeWidth }}">   <a href="{{ entry.demourl }}"> {% icon fa-cogs %} Demo {% icon fa-external-link %} <i class="fa fa-external-link"></i></a> </span>  {% endif %}	

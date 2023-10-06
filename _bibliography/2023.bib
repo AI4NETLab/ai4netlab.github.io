@@ -1,0 +1,166 @@
+
+@misc{arxiv:2309.09733,
+      title={Contrastive Learning and Data Augmentation in Traffic Classification Using a Flowpic Input Representation}, 
+      author={Alessandro Finamore and Chao Wang and Jonatan Krolikowski and Jose M. Navarro and Fuxing Chen and Dario Rossi},
+      year={2023},
+      abstract={Over the last years we witnessed a renewed interest towards Traffic Classification (TC) captivated by the rise of Deep Learning (DL). Yet, the vast majority of TC literature lacks code artifacts, performance assessments across datasets and reference comparisons against Machine Learning (ML) methods. Among those works, a recent study from IMC'22 [17] is worth of attention since it adopts recent DL methodologies (namely, few-shot learning, self-supervision via contrastive learning and data augmentation) appealing for networking as they enable to learn from a few samples and transfer across datasets. The main result of [17] on the UCDAVIS19, ISCX-VPN and ISCX-Tor datasets is that, with such DL methodologies, 100 input samples are enough to achieve very high accuracy using an input representation called "flowpic" (i.e., a per-flow 2d histograms of the packets size evolution over time). In this paper (i) we reproduce [17] on the same datasets and (ii) we replicate its most salient aspect (the importance of data augmentation) on three additional public datasets, MIRAGE-19, MIRAGE-22 and UTMOBILENET21.  While we confirm most of the original results, we also found a 20% accuracy drop on some of the investigated scenarios due to a data shift in the original dataset that we uncovered. Additionally, our study validates that the data augmentation strategies studied in [17] perform wel
+l on other datasets too. In the spirit of reproducibility and replicability we make all artifacts (code and data) available at [10].},
+      arxiv={https://arxiv.org/abs/2309.09733}
+}
+
+
+@misc{arXiv:2302.10676,
+      title={User-aware WLAN Transmit Power Control in the Wild}, 
+      author={Jonatan Krolikowski and Zied Ben Houidi and Dario Rossi},
+      year={2023},
+      howpublished={https://arxiv.org/abs/2302.10676},
+      abstract={In Wireless Local Area Networks (WLANs), Access point (AP) transmit power influences (i) received signal quality for users and thus user throughput, (ii) user association and thus load across APs and (iii) AP coverage ranges and thus interference in the network. Despite decades of academic research, transmit power levels are still, in practice, statically assigned to satisfy uniform coverage objectives. Yet each network comes with its unique distribution of users in space, calling for a power control that adapts to users' probabilities of presence, for example, placing the areas with higher interference probabilities where user density is the lowest. Although nice on paper, putting this simple idea in practice comes with a number of challenges, with gains that are difficult to estimate, if any at all. This paper is the first to address these challenges and evaluate in a production network serving thousands of daily users the benefits of a user-aware transmit power control system. Along the way, we contribute a novel approach to reason about user densities of presence from historical IEEE 802.11k  data, as well as a new machine learning approach to impute missing signal-strength measurements. Results of a thorough experimental campaign  show feasibility and quantify the gains: compared to state-of-the-art solutions, the new system can increase the median signal strength by 15dBm, while decreasing airtime interference at the same time. This comes at an affordable cost of a 5dBm decrease in uplink signal due to lack of terminal cooperation.}
+}
+
+
+@inproceedings{DR:TMA-23,
+      title={Many or Few Samples? Comparing Transfer, Contrastive and Meta-Learning in Encrypted Traffic Classification}, 
+      author={Idio Guarino and Chao Wang and Alessandro Finamore and Antonio Pescape and Dario Rossi},
+      year={2023},
+      abstract={The popularity of Deep Learning (DL), coupled with network traffic visibility reduction due to the increased adoption of HTTPS, QUIC and DNS-SEC, re-ignited interest towards Traffic Classification (TC). However, to tame the dependency from task-specific large labeled datasets we need to find better ways to learn representations that are valid across tasks. In this work we investigate this problem comparing transfer learning, meta-learning and contrastive learning against reference Machine Learning (ML) tree-based and monolithic DL models (16 methods total). Using two publicly available datasets, namely MIRAGE19 (40 classes) and AppClassNet (500 classes), we show that (i) using large datasets we can obtain more general representations, (ii) contrastive learning is the best methodology and (iii) meta-learning the worst one, and (iv) while ML tree-based cannot handle large tasks but fits well small tasks, by means of reusing learned representations, DL methods are reaching tree-based models performance also for small tasks.},
+      booktitle={Network Traffic Measurement and Analysis Conference (TMA)},
+      doi={10.23919/TMA58422.2023.10198965},
+      arxiv={https://arxiv.org/abs/2305.12432},
+      howpublished={https://ieeexplore.ieee.org/document/10198965},
+}
+
+@ARTICLE{DR:TNSM-23b,
+  author={Bovenzi, Giampaolo and Nascita, Alfredo and Yang, Lixuan and Finamore, Alessandro and Aceto, Giuseppe and Ciuonzo, Domenico and Pescapé, Antonio and Rossi, Dario},
+  journal={IEEE Transactions on Network and Service Management}, 
+  title={Benchmarking Class Incremental Learning in Deep Learning Traffic Classification}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TNSM.2023.3287430},
+  howpublished={https://ieeexplore.ieee.org/abstract/document/10155294}
+}
+
+
+
+@article{DR:TOIT-23,
+author = {Gioacchini, Luca and Vassio, Luca and Mellia, Marco and Drago, Idilio and Houidi, Zied Ben and Rossi, Dario},
+title = {i-DarkVec: Incremental Embeddings for Darknet Traffic Analysis},
+year = {2023},
+volume = {23},
+number = {3},
+issn = {1533-5399},
+url = {https://doi.org/10.1145/3595378},
+doi = {10.1145/3595378},
+abstract = {Darknets are probes listening to traffic reaching IP addresses that host no services. Traffic reaching a darknet results from the actions of internet scanners, botnets, and possibly misconfigured hosts. Such peculiar nature of the darknet traffic makes darknets a valuable instrument to discover malicious online activities, e.g., identifying coordinated actions performed by bots or scanners. However, the massive amount of packets and sources that darknets observe makes it hard to extract meaningful insights, calling for scalable tools to automatically identify and group sources that share similar behaviour.We here present i-DarkVec, a methodology to learn meaningful representations of Darknet traffic. i-DarkVec leverages Natural Language Processing techniques (e.g., Word2Vec) to capture the co-occurrence patterns that emerge when scanners or bots launch coordinated actions. As in NLP problems, the embeddings learned with i-DarkVec enable several new machine learning tasks on the darknet traffic, such as identifying clusters of senders engaged in similar activities.We extensively test i-DarkVec and explore its design space in a case study using real darknets. We show that with a proper definition of services, the learned embeddings can be used to (i) solve the classification problem to associate unknown sources’ IP addresses to the correct classes of coordinated actors and (ii) automatically identify clusters of previously unknown sources performing similar attacks and scans, easing the security analyst’s job. i-DarkVec leverages a novel incremental embedding learning approach that is scalable and robust to traffic changes, making it applicable to dynamic and large-scale scenarios.},
+journal = {ACM Trans. Internet Technol.},
+month = {aug},
+articleno = {45},
+numpages = {28},
+keywords = {darknet, Network Measurements, Word2Vec}
+}
+
+
+
+
+@misc{DR:PATENT-PCT/CN2023/080516,
+  author = {Kevin FAUVEL and Yong ZHAO and Zigang CAO and Maolin CHEN and Fuxing CHEN and Dario ROSSI},
+  title = {Traffic Classification with a Modifiable Ruleset},
+  month = {March},
+  topic = {tc-xai},
+  year = {2023},
+  howpublished = {},
+}
+
+@inproceedings{DR:AAAI-23-PDL,
+  author = {Azorin, Raphael and Gallo, Massimo and Finamore, Alessandro and Rossi, Dario and Michiardi, Pietro},
+  title = {"It's a Match!" -- A Benchmark of Task Affinity Scores for Joint Learning},
+  abstract = {While the promises of Multi-Task Learning (MTL) are attractive, characterizing the conditions of its success is still an open problem in Deep Learning. Some tasks may benefit from being learned together while others may be detrimental to one another. From a task perspective, grouping cooperative tasks while separating competing tasks is paramount to reap the benefits of MTL, i.e., reducing training and inference costs. Therefore, estimating task affinity for joint learning is a key endeavor. Recent work suggests that the training conditions themselves have a significant impact on the outcomes of MTL. Yet, the literature is lacking of a benchmark to assess the effectiveness of tasks affinity estimation techniques and their relation with actual MTL performance. In this paper, we take a first step in recovering this gap by (i) defining a set of affinity scores by both revisiting contributions from previous literature as well presenting new ones and (ii) benchmarking them on the Taskonomy dataset. Our empirical campaign reveals how, even in a small-scale scenario, task affinity scoring does not correlate well with actual MTL performance. Yet, some metrics can be more indicative than others},
+  booktitle = {AAAI'23, International Workshop on Practical Deep Learning in the Wild},
+  arxiv = {https://arxiv.org/abs/2301.02873},
+  month = {Feb},
+  year = {2023},
+  howpublished = {},
+}
+
+@article{DR:COMMAG-23,
+  author = {Iacoboaiea, Ovidiu and Krolikowski, Jonatan and Houidi, Zied Ben and Rossi, Dario},
+  title = {From Design to Deployment of Zero-touch Deep Reinforcement Learning WLANs},
+  journal = {IEEE Communication Magazine},
+  abstract = {Machine learning is increasingly used to automate networking tasks, in a paradigm known as zero touch network and service management (ZSM). In particular, deep reinforcement learning (DRL) techniques have recently gained much attention for their ability to learn taking complex decisions in different fields. In the ZSM context, DRL is an appealing candidate for tasks such as dynamic resource allocation, which are generally formulated as hard optimization problems. At the same time, successful training and deployment of DRL agents in realworld scenarios face a number of challenges that we outline and address in this article. Tackling the case of wireless local area network radio resource management, we report guidelines that extend to other use-cases and more general contexts.},
+  arxiv = {https://arxiv.org/abs/2207.06172},
+  howpublished = {https://ieeexplore.ieee.org/document/9992177},
+  year = {2023},
+  topic = {wlan-algo},
+  month = {February},
+  volume = {61},
+  issue = {2},
+  doi = {10.1109/MCOM.002.2200318},
+}
+
+@misc{DR:PATENT-PCT/EP2023/053192,
+  author = {Alexis HUET and Jose Manuel NAVARRO and Dario ROSSI},
+  title = {Identifying and locating change points in a time series of data values},
+  month = {February},
+  topic = {ad},
+  year = {2023},
+  howpublished = {},
+}
+
+@misc{DR:PATENT-PCT/EP2023/050709,
+  author = {Jonatan KROLIKOWSKI and Zied BEN HOUIDI and Fuxing CHEN and Dario ROSSI},
+  title = {A data-driven WLAN topology-related KPIs query system & estimation method},
+  month = {January},
+  topic = {wlan},
+  year = {2023},
+  howpublished = {},
+}
+
+@article{DR:TNSM-23,
+  author = {Soro, Francesca and Favale, Thomas and Giordano, Danilo and Drago, Idilio and Rescio, Tommaso and Mellia, Marco and Houidi, Zied Ben and Rossi, Dario},
+  journal = {IEEE Transactions on Network and Service Management},
+  title = {Enlightening the Darknets: Augmenting Darknet Visibility with Active Probes},
+  year = {2023},
+  abstract = {Darknets collect unsolicited traffic reaching unused address spaces. They provide insights into malicious activities, such as the rise of botnets and DDoS attacks. However, darknets provide a shallow view, as traffic is never responded. Here we quantify how their visibility increases by responding to traffic with interactive responders with increasing levels of interaction. We consider four deployments: Darknets, simple, vertical bound to specific ports, and, a honeypot that responds to all protocols on any port. We contrast these alternatives by analyzing the traffic attracted by each deployment and characterizing how traffic changes throughout the responder lifecycle on the darknet. We show that the deployment of responders increases the value of darknet data by revealing patterns that would otherwise be unobservable. We measure Side-Scan phenomena where once a host starts responding, it attracts traffic to other ports and neighboring addresses. uncovers attacks that darknets and would not observe, e.g. large-scale activity on non-standard ports. And we observe how quickly senders can identify and attack new responders. The “enlightened” part of a darknet brings several benefits and offers opportunities to increase the visibility of sender patterns. This information gain is worth taking advantage of, and we, therefore, recommend that organizations consider this option.},
+  volume = {},
+  number = {},
+  pages = {1-1},
+  doi = {10.1109/TNSM.2023.3267671},
+  howpublished = {https://ieeexplore.ieee.org/document/10102919},
+}
+
+@article{DR:ENTROPY-23,
+  author = {Franzese, Giulio and Rossi, Simone and Yang, Lixuan and Finamore, Alessandro and Rossi, Dario and Filippone, Maurizio and Michiardi, Pietro},
+  title = {How Much Is Enough? A Study on Diffusion Times in Score-Based Generative Models},
+  journal = {Entropy},
+  volume = {25},
+  year = {2023},
+  number = {4},
+  article-number = {633},
+  issn = {1099-4300},
+  abstract = {Score-based diffusion models are a class of generative models whose dynamics is described by stochastic differential equations that map noise into data. While recent works have started to lay down a theoretical foundation for these models, a detailed understanding of the role of the diffusion time T is still lacking. Current best practice advocates for a large T to ensure that the forward dynamics brings the diffusion sufficiently close to a known and simple noise distribution; however, a smaller value of T should be preferred for a better approximation of the score-matching objective and higher computational efficiency. Starting from a variational interpretation of diffusion models, in this work we quantify this trade-off and suggest a new method to improve quality and efficiency of both training and sampling, by adopting smaller diffusion times. Indeed, we show how an auxiliary model can be used to bridge the gap between the ideal and the simulated forward dynamics, followed by a standard reverse diffusion process. Empirical results support our analysis; for image data, our method is competitive with regard to the state of the art, according to standard sample quality metrics and log-likelihood.},
+  doi = {10.3390/e25040633},
+  howpublished = {https://arxiv.org/abs/2206.05173},
+}
+
+@inproceedings{DR:AutoML-23,
+  title = {Meta-Learning for Fast Model Recommendation in Unsupervised Multivariate Time Series Anomaly Detection},
+  author = {Jose Manuel Navarro and Alexis Huet and Dario Rossi},
+  year = {2023},
+  booktitle = {AutoML Conference},
+  abstract = {Unsupervised model recommendation for anomaly detection is a recent discipline for which there is no existing work that focuses on multivariate time series data. This paper studies that problem under real-world restrictions, most notably: (i) a limited time to issue a recommendation, which renders existing methods based around the testing of a large pool of models unusable; (ii) the need for generalization to previously unseen data sources, which is seldom factored in the experimental evaluation. We turn to meta-learning and propose Hydra, the first meta-recommender for anomaly detection in literature that we especially analyze in the context of multivariate times series. We conduct our experiments using 94 public datasets from 4 different data sources. Our ablation study testifies that our meta-recommender achieves a higher performance than the current state of the art, including in difficult scenarios in which data similarity is minimal: our proposal is able to recommend a model in the top 10\% (13\%) of the algorithmic pool for known (unseen) sources of data.},
+  howpublished = {https://openreview.net/pdf?id=7cUV9K3ns9Q},
+  dataseturl = {https://figshare.com/articles/software/Meta-Learning_for_Fast_Model_Recommendation_in_Unsupervised_Multivariate_Time_Series_Anomaly_Detection/22320367}
+}
+
+@inproceedings{DR:KDD-23,
+  title = {A Lightweight, Efficient and Explainable-by-Design Convolutional Neural Network for Internet Traffic Classification},
+  author = {Kevin Fauvel and Fuxing Chen and Dario Rossi},
+  abstract = {Traffic classification, i.e. the identification of the type of applications flowing in a network, is a strategic task for numerous activities (e.g., intrusion detection, routing). This task faces some critical challenges that current deep learning approaches do not address. The design of current approaches do not take into consideration the fact that networking hardware (e.g., routers) often runs with limited computational resources. Further, they do not meet the need for faithful explainability highlighted by regulatory bodies. Finally, these traffic classifiers are evaluated on small datasets which fail to reflect the diversity of applications in real-world settings. Therefore, this paper introduces a new Lightweight, Efficient and eXplainable-by-design convolutional neural network (LEXNet) for Internet traffic classification, which relies on a new residual block (for lightweight and efficiency purposes) and prototype layer (for explainability). Based on a commercial-grade dataset, our evaluation shows that LEXNet succeeds to maintain the same accuracy as the best performing state-of-the-art neural network, while providing the additional features previously mentioned. Moreover, we illustrate the explainability feature of our approach, which stems from the communication of detected application prototypes to the end-user, and we highlight the faithfulness of LEXNet explanations through a comparison with post hoc methods},
+  booktitle = {ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD'23)},
+  year = {2023},
+  month = "aug",
+  arxiv = {https://arxiv.org/abs/2202.05535},
+  howpublished = {https://dl.acm.org/doi/10.1145/3580305.3599762},
+}
+

@@ -1,0 +1,66 @@
+@techreport{TECHREP-22-AppClassNet,
+  title = {{AppClassNet: A commercial-grade dataset for application identification research}},
+  author = {Chao Wang and Alessandro Finamore and Lixuan Yang and Kevin Fauvel and Dario Rossi},
+  year = {2022},
+  month = {aug},
+  topic = {tc},
+  howpublished = {/ai4net/docs/2022_techrep_AppClassNet.pdf}
+}
+
+@inproceedings{ITC34,
+   title = {Rare Yet Popular: Evidence and Implications from Anomaly Detection Datasets},
+      author = {Jose Manuel Navarro and Alexis Huet and Dario Rossi},
+      year = {2022},
+      topic = {ad},
+      booktitle = {ITC34},
+      abstract = {Anomaly detection research works generally propose algorithms or end-to-end systems that are designed to automatically discover outliers in a dataset or a stream. While literature abounds concerning algorithms or the definition of metrics for better evaluation, the quality of the ground truth against which they are evaluated is seldom questioned. On this paper, we present a systematic analysis of available public (and additionally our private) ground truth for anomaly detection in the context of network environment, where data is intrinsically temporal, multivariate and, in particular, exhibits spatial properties, which to the best of our knowledge we are the first to explore. Our analysis reveals that, while anomalies are by definition temporally rare events, their spatial characterization clearly shows some type of anomalies are significantly more popular than others. This can be achieved through surprisingly simple techniques and may have profound implications on the cost and quality of the labeling process.},
+      howpublished = {/ai4net/docs/2022itc.pdf},   
+}
+
+@article{TNSM-21-QoE,
+  title={Deployable models for approximating web QoE metrics from encrypted traffic},
+  author={Huet, Alexis and Saverimoutou, Antoine and Houidi, Zied Ben and Shi, Hao and Cai, Shengming and Xu, Jinchun and Mathieu, Bertrand and Rossi, Dario},
+  journal={IEEE Transactions on Network and Service Management}, 
+  volume={18},
+  number={3},
+  pages={3336-3352},
+  doi={10.1109/TNSM.2021.3073672},
+  year={2021},
+  month={March},
+  abstract = {Being on endpoints, Content Providers can easily evaluate end users’ web browsing quality of experience (web QoE) by accessing in-browser computed application-level metrics. Because of end-to-end traffic encryption, it is becoming considerably harder for Internet Service Providers (ISPs) to evaluate the web QoE of their customers, which is important for management purposes. In this paper, we propose data-driven machine learning techniques and exact flow-level algorithmic methods to infer well-known application-level web performance metrics (such as SpeedIndex and Page Load Time) from raw encrypted streams of network traffic. We prove the efficiency of our approach taking as input a unique dataset of more than 200,000 experiments, targeting a large set of popular pages (Alexa top-500), from probes from several ISPs networks, with different browsers (Chrome, Firefox) and viewport combinations. Results show that our data-driven models are not only accurate for several web performance metrics, but also feature the ability to generalize to previously unseen conditions. Furthermore, we discuss how our extremely lightweight flow-level method has a provable accuracy on a specific metric, and is thus of particular appeal from a deployment viewpoint},
+  howpublished = {/ai4net/docs/2021tnsm_qoe.pdf},
+  topic={qoe-web1},
+  partner={jip-qoe}
+}
+
+@inproceedings{CNSM-20b,
+  author = {Alexis Huet and Zied Ben Houidi  and Bertrand Mathieu and Dario Rossi },
+  title = {Detecting Degradation of Web Browsing Quality of Experience (QoE)},
+  booktitle = {IEEE International Conference on Network and Service Management (CNSM)},
+  month = {Nov.},
+  year = {},
+  volume = {},
+  pages = {},
+  abstract = {Quality of Experience (QoE) inference, and particularly the detection of its degradation is an important management tool for ISPs. Yet, this task is made difficult due to widespread use of encryption on the data-plane on the one hand so that measuring QoE is hard, and to the ephemeral properties of the web content on the other hand so that changes in QoE indicators may be rooted in changes in properties of the content itself, more than being caused by network-related events. In this paper, we phrase the QoE degradation detection issue as a change point detection problem, that we tackle by leveraging a unique dataset consisting on several hundreds thousands browsing sessions spanning multiple months. Our results, beyond showing feasibility, warn about the exclusive use of QoE indicators that are very close to content, as changes in the content space can lead to false alarms that are not tied to network-related problems.},
+  doi = {},
+  topic={qoe-web2},
+  partner={jip-qoe},
+  note={keyword=qoe, project=huawei},
+  howpublished = {/ai4net/docs/2020cnsm-b.pdf},
+}
+
+
+@article{TNSM-20,
+  author = {F. {Salutari} and D. {Da Hora} and G. {Dubuc} and D. {Rossi}},
+  journal = {IEEE Transactions on Network and Service Management},
+  title = {Analyzing Wikipedia Users’ Perceived Quality Of Experience: A Large-Scale Study},
+  year = {2020},
+  month = {June},
+  volume = {17},
+  number = {2},
+  abstract = {The Web is one of the most successful Internet applications. Yet, the quality of Web users’ experience is still largely impenetrable. Whereas Web performance is typically studied with controlled experiments, in this work we perform a large-scale study of a real site, Wikipedia, explicitly asking (a small fraction of its) users for feedback on the browsing experience. The analysis of the collected feedback reveals that 85% of users are satisfied, along with both expected (e.g., the impact of browser and network connectivity) and surprising findings (e.g., absence of day/night, weekday/weekend seasonality) that we detail in this paper. Also, we leverage user responses to build supervised data-driven models to predict user satisfaction which, despite including state-of-the art quality of experience metrics, are still far from achieving accurate results (0.62 recall of negative answers). Finally, we make our dataset publicly available, hopefully contributing in enriching and refining the scientific community knowledge on Web users’ QoE.},
+  pages = {1082--1095},
+  doi = {10.1109/TNSM.2020.2978685},
+  topic={qoe-rum},
+  howpublished = {/ai4net/docs/2020tnsm.pdf},
+}

@@ -1,0 +1,10 @@
+EXCLUDE
+LICENSE
+Rakefile
+Makefile
+Gemfile
+Gemfile.lock
+tools/
+vendors/
+_site/
+ 
