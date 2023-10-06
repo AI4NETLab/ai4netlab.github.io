@@ -5,6 +5,6 @@ permalink: "/datasets"
 ---
 
 
-{% warn  <i class="fa fa-spinner"></i> Placeholder for released datasets and artefacts  %}
+warn <i class="fa fa-spinner"></i> Placeholder for released datasets and artefacts 
 
  
