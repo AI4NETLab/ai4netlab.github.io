@@ -1,8 +1,9 @@
 
-@misc{arxiv:2309.09733,
-      title={Contrastive Learning and Data Augmentation in Traffic Classification Using a Flowpic Input Representation}, 
+@inproceedings{IMC'23,
+      title={Replicating: Contrastive Learning and Data Augmentation in Traffic Classification Using a Flowpic Input Representation}, 
       author={Alessandro Finamore and Chao Wang and Jonatan Krolikowski and Jose M. Navarro and Fuxing Chen and Dario Rossi},
       year={2023},
+      booktitle={ACM Internet Measurement Conference (IMC)},
       abstract={Over the last years we witnessed a renewed interest towards Traffic Classification (TC) captivated by the rise of Deep Learning (DL). Yet, the vast majority of TC literature lacks code artifacts, performance assessments across datasets and reference comparisons against Machine Learning (ML) methods. Among those works, a recent study from IMC'22 [17] is worth of attention since it adopts recent DL methodologies (namely, few-shot learning, self-supervision via contrastive learning and data augmentation) appealing for networking as they enable to learn from a few samples and transfer across datasets. The main result of [17] on the UCDAVIS19, ISCX-VPN and ISCX-Tor datasets is that, with such DL methodologies, 100 input samples are enough to achieve very high accuracy using an input representation called "flowpic" (i.e., a per-flow 2d histograms of the packets size evolution over time). In this paper (i) we reproduce [17] on the same datasets and (ii) we replicate its most salient aspect (the importance of data augmentation) on three additional public datasets, MIRAGE-19, MIRAGE-22 and UTMOBILENET21.  While we confirm most of the original results, we also found a 20% accuracy drop on some of the investigated scenarios due to a data shift in the original dataset that we uncovered. Additionally, our study validates that the data augmentation strategies studied in [17] perform wel
 l on other datasets too. In the spirit of reproducibility and replicability we make all artifacts (code and data) available at [10].},
       arxiv={https://arxiv.org/abs/2309.09733}
