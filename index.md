@@ -1,14 +1,14 @@
 ---
 layout: page
-title:  PRC AI4NET Lab
+title:  AI4NET Lab
 subtitle: Academic activities of the AI4NET Lab
 title: false
 ---
 
 ## Welcome !
 
-In this page you will find about <i class="fa fa-graduation-cap" aria-hidden="true"></i> academic activities of the Paris Research Center (PRC) AI4NET Lab.
-This page is not meant to be complete, and is updated  <i class="fa fa-hourglass" aria-hidden="true"></i> episodically.  If interested, don't hesitate to <i class="fa fa-envelope" aria-hidden="true"></i> [contact us](mailto:dario(dot)rossi(at)huawei(dot)com).
+In this page you will find about <i class="fa fa-graduation-cap" aria-hidden="true"></i> academic activities of the AI4NET Lab.
+This page is not meant to be complete, and is updated  <i class="fa fa-hourglass" aria-hidden="true"></i> episodically.  If interested, don't hesitate to <i class="fa fa-envelope" aria-hidden="true"></i> [contact us](mailto:ai4netlab@gmail.com).
 
 {% assign badgeWidth = "150px" %}
 
