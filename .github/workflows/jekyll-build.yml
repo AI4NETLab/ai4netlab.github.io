@@ -5,7 +5,7 @@ on:
     #branches-ignore:
     #- main
     branches:
-    - sources
+    - none
 
 jobs:
   build:
