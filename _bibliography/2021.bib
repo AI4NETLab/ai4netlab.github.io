@@ -1,0 +1,168 @@
+@inproceedings{DR:CoNEXT-21a,
+  author = {Gioacchini, Luca and Vassio, Luca and Mellia, Marco and Drago, Idilio and Ben Houidi, Zied and Rossi, Dario},
+  title = {DarkVec: Automatic Analysis of Darknet Traffic with Word Embeddings},
+  booktitle = {ACM CoNEXT, Runner-up for best paper award},
+  abstract = {Darknets are passive probes listening to traffic reaching IP addresses that host no services. Traffic reaching them is unsolicited by nature and often induced by scanners, malicious senders and misconfigured hosts. Its peculiar nature makes it a valuable source of information to learn about malicious activities. However, the massive amount of packets and sources that reach darknets makes it hard to extract meaningful insights. In particular, multiple senders contact the darknet while performing similar and coordinated tasks, which are often commanded by common controllers (botnets, crawlers, etc.). How to automatically identify and group those senders that share similar behaviors remains an open problem. We here introduce DarkVec, a methodology to identify clusters of senders (i.e., IP addresses) engaged in similar activities on darknets. DarkVec leverages word embedding techniques (e.g., Word2Vec) to capture the co-occurrence patterns of sources hitting the darknets. We extensively test DarkVec and explore its design space in a case study using one month of darknet data. We show that with a proper definition of service, the generated embeddings can be easily used to (i) associate unknown senders’ IP addresses to the correct known labels (more than 96% accuracy), and (ii) identify new attack and scan groups of previously unknown senders. We contribute DarkVec source code and datasets to the community also to stimulate the use of word embeddings to automatically learn patterns on generic traffic traces},
+  year = {2021},
+  note = {bestpaperrunnerup},
+  month = {December},
+  partner = {polito-mellia},
+  howpublished = {https://dl.acm.org/doi/10.1145/3485983.3494863},
+  topic = {network-security},
+}
+
+@inproceedings{DR:CoNEXT-21b,
+  author = {Azorin, Raphael and Gallo, Massimo and Finamore, Alessandro and Filippone, Maurizio and Michiardi, Pietro and Rossi, Dario},
+  title = {Towards a Generic Deep Learning Pipeline for Traffic Measurements},
+  booktitle = {ACM CoNEXT, Student Workshop},
+  year = {2021},
+  month = {December},
+  howpublished = {https://dl.acm.org/doi/10.1145/3488658.3493785},
+  topic = {measurement},
+}
+
+@inproceedings{DR:SEC-21,
+  author = {Massimo Gallo and Alessandro Finamore and Gwendal Simon and Dario Rossi},
+  title = {{FENXI}: Fast In-Network Analytics},
+  abstract = {Live traffic analysis at the first aggregation point in the ISP network enables the implementation of complex traffic engineering policies but is limited by the scarce processing capabilities, especially for Deep Learning (DL) based analytics. The introduction of specialized hardware accelerators i.e., Tensor Processing Unit (TPU), offers the opportunity to enhance processing capabilities of network devices at the edge. Yet, to date, no packet processing pipeline is capable of offering DL-based analysis capabilities in the data-plane, without interfering with network operations. In this paper, we present FENXI, a system to run complex analytics by leveraging TPU. The design of FENXI decouples forwarding operations and traffic analytics which operates at different granularities i.e., packet and flow levels. We conceive two independent modules that asynchronously communicate to exchange network data and analytics results, and design data structures to extract flow level statistics without impacting per-packet processing. We prototype FENXI on a general-purpose server and evaluate its performance in both adversarial and realistic network conditions. Our evaluation shows that FENXI is able to offer DL processing to 100 Gbps linecards with a limited number of resources, while also dynamically adapting to network conditions.},
+  booktitle = {IEEE/ACM Symposium on Edge Computing (SEC)},
+  year = {2021},
+  month = {Dec.},
+   arxiv = {http://arxiv.org/abs/2105.11738},
+  topic = {tc-system},
+}
+
+@article{DR:TNSM-21b,
+  author = {Lixuan {Yang} and Alessandro {Finamore} and Jun {Feng} and Dario {Rossi}},
+  title = {Deep Learning and Zero-Day Traffic Classification: Lessons learned from a commercial-grade dataset},
+  journal = {IEEE Transactions on Network and Service Management},
+  volume = {18},
+  number = {4},
+  pages = {4103--4118},
+  year = {2021},
+  month = {December},
+  doi = {10.1109/TNSM.2021.3122940},
+  abstract = {The increasing success of Machine Learning (ML) and Deep Learning (DL) has recently re-sparked interest towards traffic classification. While supervised techniques provide satisfactory performance when classifying known traffic, the detection of zero-day (i.e., unknown) traffic is a more challenging task. At the same time, zero-day detection, generally tackled with unsupervised techniques such as clustering, received less coverage by the traffic classification literature which focuses more on deriving DL models via supervised techniques. Moreover, the combination of supervised and unsupervised techniques poses challenges not fully covered by the traffic classification literature. In this paper, we share our experience on a commercial-grade DL traffic classification engine that combines supervised and unsupervised techniques to identify known and zero-day traffic. In particular, we rely on a dataset with hundreds of very fine grained application labels, and perform a thorough assessment of two state of the art traffic classifiers in commercial-grade settings. This pushes the boundaries of traffic classifiers evaluation beyond the few tens of classes typically used in the literature. Our main contribution is the design and evaluation of GradBP, a novel technique for zero-day applications detection. Based on gradient backpropagation and tailored for DL models, GradBP yields superior performance with respect to state of the art alternatives, in both accuracy and computational cost. Overall, while ML and DL models are both equally able to provide excellent performance for the classification of known traffic, the non-linear feature extraction process of DL models backbone provides sizable advantages for the detection of unknown classes over classical ML models},
+  arxiv = {https://arxiv.org/abs/2104.03182},
+  howpublished = {https://ieeexplore.ieee.org/document/9585567},
+  topic = {tc-algo},
+}
+
+@inproceedings{DR:TMA-21,
+  author = {Giampaolo Bovenzi and Lixuan Yang and Alessandro Finamore and Giuseppe Aceto and Domenico Ciuonzo and Antonio Pescape and Dario Rossi},
+  title = {A First Look at Class Incremental Learning in Deep Learning Mobile Traffic},
+  abstract = {The recent popularity growth of Deep Learning (DL) re-ignited the interest towards traffic classification, with several studies demonstrating the accuracy of DL-based classifiers to identify Internet applications' traffic. Even with the aid of hardware accelerators (GPUs, TPUs), DL model training remains expensive, and limits the ability to operate frequent model updates necessary to fit to the ever evolving nature of Internet traffic, and mobile traffic in particular. To address this pain point, in this work we explore Incremental Learning (IL) techniques to add new classes to models without a full retraining, hence speeding up model's updates cycle. We consider iCarl, a state of the art IL method, and MIRAGE-2019, a public dataset with traffic from 40 Android apps, aiming to understand if there is a case for incremental learning in traffic classification. By dissecting iCarl internals, we discuss ways to improve its design, contributing a revised version, namely iCarl+. Despite our analysis reveals their infancy, IL techniques are a promising research area on the roadmap towards automated DL-based traffic analysis systems.},
+  booktitle = {IFIP Traffic Monitoring and Analysis (TMA)},
+  year = {2021},
+  month = {September},
+  howpublished = {https://dl.ifip.org/db/conf/tma/tma2021/tma2021-paper4.pdf},
+  topic = {tc-train},
+}
+
+@misc{DR:PATENT-PCT/EP2021/074381,
+  author = {Alexis Huet and Jose Manuel Navarro and Dario Rossi},
+  title = {Root cause analysis of anomalous events in a computer network},
+  month = {September},
+  year = {2021},
+  howpublished = {},
+}
+
+@inproceedings{DR:NETWORKING-21,
+  author = {Ovidiu Iacoboaiea and Jonatan Krolikowski and Zied {Ben Houidi} and Dario Rossi},
+  title = {{Real-Time} Channel Management in {WLANs:} Deep Reinforcement Learning Versus Heuristics},
+  booktitle = {IFIP Networking},
+  address = {Helsinki, Finland},
+  month = {jun},
+  year = {2021},
+  abstract = {Today's WLANs rely on a centralized Access Controller (AC) entity for managing distributed wireless Access Points (APs) to which user devices connect. The availability of real-time analytics at the AC opens the possibility to automate the allocation of scarce radio resources, continuously adapting to changes in traffic demands. Often, the allocation problem is formulated in terms of weighted graph coloring, which is NP-hard, and custom heuristics are used to find satisfactory solutions. In this paper, we contrast solutions that are based on (and even improve) state of the art heuristics to a data-driven solution that leverages Deep Reinforcement Learning (DRL). Based on both simulation results as well as experiments in a real deployment, we show that our DRL-based scheme not only learns to solve the complex combinatorial problem in bounded time, outperforming heuristics, but it also exhibits appealing generalization properties, e.g. to different network sizes and densities.},
+  howpublished = {https://ieeexplore.ieee.org/document/9472828},
+  topic = {wlan},
+}
+
+@inproceedings{DR:ICML-UDL-21,
+  author = {Lixuan {Yang} and Dario {Rossi}},
+  title = {Thinkback: Task Specific Out-of-Distribution Detection},
+  year = {2021},
+  month = {June},
+  booktitle = {International Conference on Machine Learning (ICML) workshop on Uncertainty and Robustness in Deep Learning (UDL) 2021},
+  abstract = {The increased success of Deep Learning (DL) has recently sparked large-scale deployment of DL models in many diverse industry segments. Yet, a crucial weakness of supervised model is the inherent difficulty in handling out-of-distribution samples, i.e., samples belonging to classes that were not presented to the model at training time. We propose in this paper a novel way to formulate the out-of-distribution detection problem, tailored for DL models. Our method does not require fine tuning process on training data, yet is significantly more accurate than the state of the art for out-ofdistribution detection.},
+  topic = {tc-algo},
+  arxiv = {https://arxiv.org/pdf/2107.06668},
+}
+
+@inproceedings{DR:INFOCOM-21,
+  author = {Jonatan Krolikowski and Ovidiu Iacoboaiea and Zied Ben Houidi and Dario Rossi},
+  title = {WiFi Dynoscope: Interpretable Real-Time WLAN Optimization},
+  booktitle = {IEEE INFOCOM, Demo session},
+  month = {may},
+  year = {2021},
+  abstract = {Today's Wireless Local Area Networks (WLANs) rely on a centralized Access Controller (AC) entity for managing a fleet of Access Points (APs). Real-time analytics enable the AC to optimize the radio resource allocation (i.e. channels) on-line in response to sudden traffic shifts. Deep Reinforcement Learning (DRL) relieves the pressure of finding good optimization heuristics by learning a policy through interactions with the environment. However, it is not granted that DRL will behave well in unseen conditions. Tools such as the WiFi Dynoscope introduced here are necessary to gain this trust. In a nutshell, this demo dissects the dynamics of WLAN networks, both simulated and from real large-scale deployments, by (i) comparatively analyzing the performance of different algorithms on the same deployment at high level and (ii) getting low-level details and insights into algorithmic behaviour.},
+  volume = {},
+  pages = {},
+  doi = {},
+  howpublished = {https://ieeexplore.ieee.org/document/9484543},
+  topic = {wlan},
+}
+ 
+}
+
+@article{DR:TNSM-21a,
+  title = {Deployable models for approximating web QoE metrics from encrypted traffic},
+  author = {Huet, Alexis and Saverimoutou, Antoine and Houidi, Zied Ben and Shi, Hao and Cai, Shengming and Xu, Jinchun and Mathieu, Bertrand and Rossi, Dario},
+  journal = {IEEE Transactions on Network and Service Management},
+  year = {2021},
+  month = {March},
+  vol = {18},
+  issue = {1},
+  pages = {839-854},
+  doi = {10.1109/TNSM.2020.3037019},
+  abstract = {Being on endpoints, Content Providers can easily evaluate end users’ web browsing quality of experience (web QoE) by accessing in-browser computed application-level metrics. Because of end-to-end traffic encryption, it is becoming considerably harder for Internet Service Providers (ISPs) to evaluate the web QoE of their customers, which is important for management purposes. In this paper, we propose data-driven machine learning techniques and exact flow-level algorithmic methods to infer well-known application-level web performance metrics (such as SpeedIndex and Page Load Time) from raw encrypted streams of network traffic. We prove the efficiency of our approach taking as input a unique dataset of more than 200,000 experiments, targeting a large set of popular pages (Alexa top-500), from probes from several ISPs networks, with different browsers (Chrome, Firefox) and viewport combinations. Results show that our data-driven models are not only accurate for several web performance metrics, but also feature the ability to generalize to previously unseen conditions. Furthermore, we discuss how our extremely lightweight flow-level method has a provable accuracy on a specific metric, and is thus of particular appeal from a deployment viewpoint},
+  howpublished = { https://ieeexplore.ieee.org/document/9406110},
+  topic = {qoe-web},
+}
+
+@misc{DR:PATENT-PCT/EP2021/050902,
+  author = {Alessandro Finamore and Massimo Gallo and Gwendal Simon and Dario Rossi},
+  title = {Controller For A Cache And Method For Controlling A Cache},
+  month = {January},
+  year = {2021},
+  howpublished = {},
+}
+
+@misc{DR:PATENT-PCT/EP2021/076753,
+  author = {Zied Ben Houidi and and Dario Rossi and Lorenzo del Sordo and Giulia Milan and Luca Vassio and Marco Mellia and Idilio Drago},
+  title = {Honeypot entity and method of operating the same},
+  year = {2021},
+  howpublished = {},
+}
+
+@misc{DR:PATENT-PCT/FR2021/000024,
+  author = {Jose Manuel Navarro and Alexis Huet and Dario Rossi and Andrian Putina and Mauro Sozio},
+  title = {System and method for combining anomaly detection algorithms},
+  topic = {ad-algo},
+  year = {2021},
+  howpublished = {},
+}
+
+@misc{DR:PATENT-PCT/EP2021/057212,
+  author = {Lixuan Yang and Feng Jun and Dario Rossi},
+  title = {Device and method for identifying unknown classes for artificial neural networks},
+  year = {2021},
+  howpublished = {},
+}
+
+@article{DR:NETMAG-21,
+  author = {Lixuan {Yang} and and Dario {Rossi}},
+  title = {Quality monitoring and assessment of deployed Deep Learning models for Network AIOps},
+  abstract = {Artificial Intelligence (AI) has recently attracted a lot of attention, transitioning from research labs to a wide range of successful deployments in many fields, which is particularly true for Deep Learning (DL) techniques. Ultimately, DL models are software artifacts, that, as any software realization, need to be regularly maintained and updated: consequently, as a logical extension of the DevOps software development practices to AI-software applied to network operation and management, AIOps foresee to continuously push evolved models in production networks. While for some network use-cases DL models can be incrementally updated at relatively low cost, the more typical case is that updating deployed DL models has a significant cost that needs to be managed. It follows that, during the lifecycle of DL model deployment, it is important to assess the relative ``staleness'' of deployed DL models, so to prioritize update of ``ageing'' models. In this article, we cover the issue of quality assessment and tracking of DL models deployed for network management purposes.},
+  journal = {IEEE Network Magazine,},
+  year = {2021},
+  month = {November/December},
+  vol = {35},
+  issue = {6},
+  pages = {84-90},
+  doi = {10.1109/MNET.001.2100227},
+  topic = {tc-algo},
+  howpublished = {https://ieeexplore.ieee.org/document/9687518},
+}
+
