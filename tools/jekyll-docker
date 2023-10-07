@@ -1,0 +1,55 @@
+#! /bin/bash
+
+
+# USER=1002
+#  --user=$USER\  the user does not exisit in the ocntainer!
+
+#then as an export variable is too late too!
+#export JEKYLL_UID=$(id -u)
+# export JEKYLL_UID=1002
+# export JEKYLL_GID=1002
+
+#  aarg -- you need to add these things in the composite environment thingy
+#
+#    environment:
+#       JEKYLL_UID=1002
+#       JEKYLL_GID=1002
+# before actually building the container
+#
+
+
+jekyll_docker() {
+
+export JEKYLL_VERSION=3.8
+docker run \
+  --volume="$PWD:/srv/jekyll:Z" \
+  --volume="$PWD/vendor/bundle:/usr/local/bundle:Z"\
+  -it jekyll/jekyll:$JEKYLL_VERSION \
+   $*
+}
+
+jekyll_docker $*
+exit
+
+
+#bundle update jekyll 
+#jekyll_docker build --incremental --verbose
+
+# ../jekyll-docker jekyll serve --watch
+# takes a minute for the first build (warmup cost)
+
+
+#------------------------------------------------------
+if [[ $1=="-b" ]] 
+then
+    jekyll_docker build --incremental --verbose
+elif [[ $1=="-h" ]] 
+then
+    jekyll_docker help
+elif [[ $1=="-h" ]] 
+then
+    jekyll_docker version 
+else 
+    echo "help"
+fi
+
