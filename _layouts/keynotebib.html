@@ -1,0 +1,76 @@
+---
+---
+
+<!-- 
+	v1 Mon 21th Jun 2021, fix for elisf + fa-comments-o stub for panel 
+	v0 Mon 21th Jun 2021, copied from pattentbib v6 (Tue Feb  6 23:11:08 CET 2018)
+-->
+
+{% assign badgeWidth = "100px" %}
+
+
+	<abbr><strong><a name="{{key | regex: '^DR:', '' }}"></a>[{{key | regex: '^DR:', '' }}]</strong></abbr>
+	{{ entry.author }}, 
+
+	{% if entry.howpublished %}
+		{% if entry.note contains "panel"  %}
+			<i class="fa fa-comments-o" aria-hidden="true" href="{{entry.howpublished}}"></i> 
+			<a href="{{entry.howpublished}}" > <emph> {{ entry.title }} </emph></a> 
+		{% else %}
+    		
+			<i class="fa fa-comment-o" aria-hidden="true" href="{{entry.howpublished}}"></i> 
+			<a href="{{entry.howpublished}}" > <emph> {{ entry.title }} </emph></a> 
+		{% endif %}	
+    {% else %}
+    	{{ entry.title }} 
+	{% endif %}	
+
+
+
+<emph>
+	{% if entry.venue %} <em> {{ entry.venue }} </em>, {% endif %}	
+	{% if entry.month %} {{ entry.month }}, {% endif %}	   
+	{% if entry.year  %} {{ entry.year }}   {% endif %}	   
+</emph>
+ 
+{% if entry.slideurl %} <span class="badge badge-pill btn-light" style="width: {{ badgeWidth }}"> <a href="{{entry.slideurl}}"><i class="fa fa-presentation-screen"></i> Slides  <i class="fa fa-external-link"></i></a> </span> {% endif %}
+{% if entry.videourl %} <span class="badge badge-pill btn-light" style="width: {{ badgeWidth }}"><a href="{{entry.videourl}}"><i class="fas fa-video"></i> Video <i class="fa fa-external-link"></i> </a>  </span>                     {% endif %}
+{% if entry.pressurl %}  <span class="badge badge-pill btn-light"  style="width: {{ badgeWidth }}"><a href="{{entry.pressurl}}"><i class="fas fa-newspaper"></i>  Press <i class="fa fa-external-link"></i> </a> </span>         {% endif %} 
+
+ 
+{% if entry.note contains "panelist"  %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}"> {% icon fa fa-users %} Panelist </span>
+
+{% elsif entry.note contains "panel"  %}
+    <span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}"> {% icon fa fa-users %} Panel </span>
+
+{% elsif entry.note contains "tutorial"  %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}"> {% icon fa fa-users %} Tutorial </span>
+
+{% elsif entry.note contains "keynote"  %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}"> {% icon fa fa-user %} Keynote </span>
+
+{% elsif entry.note contains "invited" %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}">{% icon fa fa-user %} Invited</span>
+
+{% elsif entry.note contains "award"  %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}"> {% icon fa fa-star %} Award talk </span>
+
+{% elsif entry.note contains "talk" %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}">{% icon fa fa-user %} Talk</span>
+
+{% else %}
+	<span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}">{% icon fa fa-user %} Misc</span>
+{% endif %}	   
+
+
+{% if entry.abstract %}
+<button class="btn badge btn-default btn-xs" data-toggle="collapse" data-target="#{{key | regex: '^DR:', 'Abstract-' }}">More info<span class="caret"></span></button>
+{% endif %}
+
+<div id="{{key | regex: '^DR:', 'Abstract-' }}" class="collapse well"> {{ entry.abstract }}  </div>
+
+
+<!-- works but it's too drastic.... | regex: 'note =.*,', ''  ...filter from bibtex2latex.pl -->
+
+
