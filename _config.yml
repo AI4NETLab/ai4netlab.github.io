@@ -1,6 +1,8 @@
 # --- General options --- #
 
-remote_theme: daattali/beautiful-jekyll@3.0.0
+#remote_theme: daattali/beautiful-jekyll@3.0.0
+theme: beautiful-jekyll
+
 
 # url is the full website URL
 # baseurl is the website's URL without the hostname
