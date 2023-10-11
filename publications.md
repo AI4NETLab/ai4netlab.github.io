@@ -8,7 +8,6 @@ permalink: "/publications"
  - Type: 
 <span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}">Journal</span>
 <span class="badge badge-pill btn-success" style="width: {{ badgeWidth }}">Conference</span>
-<span class="badge badge-pill btn-danger" style="width: {{ badgeWidth }}">Patent</span>
 <span class="badge badge-pill btn-secondary" style="width: {{ badgeWidth }}">Tech.Rep.</span>
  - Extra: 
 <span class="badge badge-pill btn-warning" style="width: {{ badgeWidth }}"> {% icon fa fa-star %} Award  </span>
