@@ -1,4 +1,37 @@
 
+@inproceedings{CoNEXT-23a,
+      title={{SPADA: A Sparse Approximate Data Structure representation for data plane per-flow monitoring}},
+      author={Andrea Monterubbiano and Raphael Azorin and Gabriele Castellano and  Massimo Gallo and  Salvatore Pontarelli and Dario Rossi},
+      booktitle={ACM CoNEXT},
+      month={Dec.},
+      year=2023,
+}
+
+@inproceedings{CoNEXT-23b,
+       title={Change Point Detection in WLANs with Random AP Forests},
+      author={Alexis Huet and Jonatan Krolikowski and Jose Manuel Navarro and Fuxing Chen and Dario Rossi},
+      booktitle={ACM CoNEXT},
+      month={Dec.},
+      year=2023,
+}
+
+@inproceedings{CoNEXT-23c,
+      title={Toward Generative Data Augmentation for Traffic Classification},
+      author={Chao Wang and Alessandro Finamore and Massimo Gallo and Pietro Michiardi  and Dario Rossi},
+      booktitle={ACM CoNEXT, Student Workshop},
+      month={Dec.},
+      year=2023,
+}
+
+@inproceedings{CoNEXT-23d,
+      title={Memory-efficient Random Forests in FPGA SmartNICs},
+      author={Andrea Monterubbiano and Raphael Azorin and Gabriele Castellano and  Massimo Gallo and  Salvatore Pontarelli and Dario Rossi},
+      booktitle={ACM CoNEXT, Poster session},
+      month={Dec.},
+      year=2023,
+}
+
+
 @inproceedings{IMC-23,
       title={Replicating: Contrastive Learning and Data Augmentation in Traffic Classification Using a Flowpic Input Representation}, 
       author={Alessandro Finamore and Chao Wang and Jonatan Krolikowski and Jose M. Navarro and Fuxing Chen and Dario Rossi},
@@ -18,17 +51,6 @@ l on other datasets too. In the spirit of reproducibility and replicability we m
       abstract={In Wireless Local Area Networks (WLANs), Access point (AP) transmit power influences (i) received signal quality for users and thus user throughput, (ii) user association and thus load across APs and (iii) AP coverage ranges and thus interference in the network. Despite decades of academic research, transmit power levels are still, in practice, statically assigned to satisfy uniform coverage objectives. Yet each network comes with its unique distribution of users in space, calling for a power control that adapts to users' probabilities of presence, for example, placing the areas with higher interference probabilities where user density is the lowest. Although nice on paper, putting this simple idea in practice comes with a number of challenges, with gains that are difficult to estimate, if any at all. This paper is the first to address these challenges and evaluate in a production network serving thousands of daily users the benefits of a user-aware transmit power control system. Along the way, we contribute a novel approach to reason about user densities of presence from historical IEEE 802.11k  data, as well as a new machine learning approach to impute missing signal-strength measurements. Results of a thorough experimental campaign  show feasibility and quantify the gains: compared to state-of-the-art solutions, the new system can increase the median signal strength by 15dBm, while decreasing airtime interference at the same time. This comes at an affordable cost of a 5dBm decrease in uplink signal due to lack of terminal cooperation.}
 }
 
-
-@inproceedings{DR:TMA-23,
-      title={Many or Few Samples? Comparing Transfer, Contrastive and Meta-Learning in Encrypted Traffic Classification}, 
-      author={Idio Guarino and Chao Wang and Alessandro Finamore and Antonio Pescape and Dario Rossi},
-      year={2023},
-      abstract={The popularity of Deep Learning (DL), coupled with network traffic visibility reduction due to the increased adoption of HTTPS, QUIC and DNS-SEC, re-ignited interest towards Traffic Classification (TC). However, to tame the dependency from task-specific large labeled datasets we need to find better ways to learn representations that are valid across tasks. In this work we investigate this problem comparing transfer learning, meta-learning and contrastive learning against reference Machine Learning (ML) tree-based and monolithic DL models (16 methods total). Using two publicly available datasets, namely MIRAGE19 (40 classes) and AppClassNet (500 classes), we show that (i) using large datasets we can obtain more general representations, (ii) contrastive learning is the best methodology and (iii) meta-learning the worst one, and (iv) while ML tree-based cannot handle large tasks but fits well small tasks, by means of reusing learned representations, DL methods are reaching tree-based models performance also for small tasks.},
-      booktitle={Network Traffic Measurement and Analysis Conference (TMA)},
-      doi={10.23919/TMA58422.2023.10198965},
-      arxiv={https://arxiv.org/abs/2305.12432},
-      howpublished={https://ieeexplore.ieee.org/document/10198965},
-}
 
 @ARTICLE{DR:TNSM-23b,
   author={Bovenzi, Giampaolo and Nascita, Alfredo and Yang, Lixuan and Finamore, Alessandro and Aceto, Giuseppe and Ciuonzo, Domenico and Pescapé, Antonio and Rossi, Dario},
@@ -64,32 +86,6 @@ keywords = {darknet, Network Measurements, Word2Vec}
 
  
 
-@inproceedings{DR:AAAI-23-PDL,
-  author = {Azorin, Raphael and Gallo, Massimo and Finamore, Alessandro and Rossi, Dario and Michiardi, Pietro},
-  title = {"It's a Match!" -- A Benchmark of Task Affinity Scores for Joint Learning},
-  abstract = {While the promises of Multi-Task Learning (MTL) are attractive, characterizing the conditions of its success is still an open problem in Deep Learning. Some tasks may benefit from being learned together while others may be detrimental to one another. From a task perspective, grouping cooperative tasks while separating competing tasks is paramount to reap the benefits of MTL, i.e., reducing training and inference costs. Therefore, estimating task affinity for joint learning is a key endeavor. Recent work suggests that the training conditions themselves have a significant impact on the outcomes of MTL. Yet, the literature is lacking of a benchmark to assess the effectiveness of tasks affinity estimation techniques and their relation with actual MTL performance. In this paper, we take a first step in recovering this gap by (i) defining a set of affinity scores by both revisiting contributions from previous literature as well presenting new ones and (ii) benchmarking them on the Taskonomy dataset. Our empirical campaign reveals how, even in a small-scale scenario, task affinity scoring does not correlate well with actual MTL performance. Yet, some metrics can be more indicative than others},
-  booktitle = {AAAI'23, International Workshop on Practical Deep Learning in the Wild},
-  arxiv = {https://arxiv.org/abs/2301.02873},
-  month = {Feb},
-  year = {2023},
-  howpublished = {},
-}
-
-@article{DR:COMMAG-23,
-  author = {Iacoboaiea, Ovidiu and Krolikowski, Jonatan and Houidi, Zied Ben and Rossi, Dario},
-  title = {From Design to Deployment of Zero-touch Deep Reinforcement Learning WLANs},
-  journal = {IEEE Communication Magazine},
-  abstract = {Machine learning is increasingly used to automate networking tasks, in a paradigm known as zero touch network and service management (ZSM). In particular, deep reinforcement learning (DRL) techniques have recently gained much attention for their ability to learn taking complex decisions in different fields. In the ZSM context, DRL is an appealing candidate for tasks such as dynamic resource allocation, which are generally formulated as hard optimization problems. At the same time, successful training and deployment of DRL agents in realworld scenarios face a number of challenges that we outline and address in this article. Tackling the case of wireless local area network radio resource management, we report guidelines that extend to other use-cases and more general contexts.},
-  arxiv = {https://arxiv.org/abs/2207.06172},
-  howpublished = {https://ieeexplore.ieee.org/document/9992177},
-  year = {2023},
-  topic = {wlan-algo},
-  month = {February},
-  volume = {61},
-  issue = {2},
-  doi = {10.1109/MCOM.002.2200318},
-}
- 
 
 @article{DR:TNSM-23,
   author = {Soro, Francesca and Favale, Thomas and Giordano, Danilo and Drago, Idilio and Rescio, Tommaso and Mellia, Marco and Houidi, Zied Ben and Rossi, Dario},
@@ -139,3 +135,43 @@ keywords = {darknet, Network Measurements, Word2Vec}
   howpublished = {https://dl.acm.org/doi/10.1145/3580305.3599762},
 }
 
+
+
+@inproceedings{DR:TMA-23,
+      title={Many or Few Samples? Comparing Transfer, Contrastive and Meta-Learning in Encrypted Traffic Classification}, 
+      author={Idio Guarino and Chao Wang and Alessandro Finamore and Antonio Pescape and Dario Rossi},
+      year={2023},
+      abstract={The popularity of Deep Learning (DL), coupled with network traffic visibility reduction due to the increased adoption of HTTPS, QUIC and DNS-SEC, re-ignited interest towards Traffic Classification (TC). However, to tame the dependency from task-specific large labeled datasets we need to find better ways to learn representations that are valid across tasks. In this work we investigate this problem comparing transfer learning, meta-learning and contrastive learning against reference Machine Learning (ML) tree-based and monolithic DL models (16 methods total). Using two publicly available datasets, namely MIRAGE19 (40 classes) and AppClassNet (500 classes), we show that (i) using large datasets we can obtain more general representations, (ii) contrastive learning is the best methodology and (iii) meta-learning the worst one, and (iv) while ML tree-based cannot handle large tasks but fits well small tasks, by means of reusing learned representations, DL methods are reaching tree-based models performance also for small tasks.},
+      booktitle={Network Traffic Measurement and Analysis Conference (TMA)},
+      doi={10.23919/TMA58422.2023.10198965},
+      arxiv={https://arxiv.org/abs/2305.12432},
+      howpublished={https://ieeexplore.ieee.org/document/10198965},
+}
+
+
+@inproceedings{DR:AAAI-23-PDL,
+  author = {Azorin, Raphael and Gallo, Massimo and Finamore, Alessandro and Rossi, Dario and Michiardi, Pietro},
+  title = {"It's a Match!" -- A Benchmark of Task Affinity Scores for Joint Learning},
+  abstract = {While the promises of Multi-Task Learning (MTL) are attractive, characterizing the conditions of its success is still an open problem in Deep Learning. Some tasks may benefit from being learned together while others may be detrimental to one another. From a task perspective, grouping cooperative tasks while separating competing tasks is paramount to reap the benefits of MTL, i.e., reducing training and inference costs. Therefore, estimating task affinity for joint learning is a key endeavor. Recent work suggests that the training conditions themselves have a significant impact on the outcomes of MTL. Yet, the literature is lacking of a benchmark to assess the effectiveness of tasks affinity estimation techniques and their relation with actual MTL performance. In this paper, we take a first step in recovering this gap by (i) defining a set of affinity scores by both revisiting contributions from previous literature as well presenting new ones and (ii) benchmarking them on the Taskonomy dataset. Our empirical campaign reveals how, even in a small-scale scenario, task affinity scoring does not correlate well with actual MTL performance. Yet, some metrics can be more indicative than others},
+  booktitle = {AAAI'23, International Workshop on Practical Deep Learning in the Wild},
+  arxiv = {https://arxiv.org/abs/2301.02873},
+  month = {Feb},
+  year = {2023},
+  howpublished = {},
+}
+
+@article{DR:COMMAG-23,
+  author = {Iacoboaiea, Ovidiu and Krolikowski, Jonatan and Houidi, Zied Ben and Rossi, Dario},
+  title = {From Design to Deployment of Zero-touch Deep Reinforcement Learning WLANs},
+  journal = {IEEE Communication Magazine},
+  abstract = {Machine learning is increasingly used to automate networking tasks, in a paradigm known as zero touch network and service management (ZSM). In particular, deep reinforcement learning (DRL) techniques have recently gained much attention for their ability to learn taking complex decisions in different fields. In the ZSM context, DRL is an appealing candidate for tasks such as dynamic resource allocation, which are generally formulated as hard optimization problems. At the same time, successful training and deployment of DRL agents in realworld scenarios face a number of challenges that we outline and address in this article. Tackling the case of wireless local area network radio resource management, we report guidelines that extend to other use-cases and more general contexts.},
+  arxiv = {https://arxiv.org/abs/2207.06172},
+  howpublished = {https://ieeexplore.ieee.org/document/9992177},
+  year = {2023},
+  topic = {wlan-algo},
+  month = {February},
+  volume = {61},
+  issue = {2},
+  doi = {10.1109/MCOM.002.2200318},
+}
+ 
