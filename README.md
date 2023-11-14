@@ -2,33 +2,28 @@
 
 This website stores the Jekyll sources that are compiled with an GitHub action and deployed to  https://ai4netlab.github.io
 
+The website uses a single repo for the artefacts and sources:
 
-## Initial idea
-
-Initially I thought I would store sources & artifacts here, by reading about this GitHub Action for CI of GH pages:	
-	https://martinopilia.com/posts/2020/02/22/migration.html
-
-a (much) better idea would be to:
-	- use a single repo (prc-ai4net.github.io)
-	- make two branches (jekyll-sources, master)
-	- push the sources to the jekyll-sources branch
-	- make a workflow to automate build and push of _site artefacts to the master branch
-
-I think this small website https://prc-ai4net.github.io is quite the ideal candidate for a tryout of the pipeline
-(I also think that it can be super delicate to correctly setup the pipeline at first).  worth trying, unsure if 
-the workflow  can be safely and fully ported to, say, my main personal page (fragile, delicate and heavy).
+	- single repo 
+		- repo `https://github.com/AI4NETLab/ai4netlab.github.io/` repo
+ 		- branch jekyll-sources, to
+   		- branch `main` (previously known as master)  store jekyll and bibtex and etc., and compiled artefacts for `https://ai4net.github.io`
+	- automated compilation process 
+ 		- push the sources to the `main` branch
+		- the Action workflow  deploy succesfully compiled `_site` artefacts 
 
 
 ## GitHub actions 100% working
 
-While the default actions do not work for me, after many attempts I made it work to automatically compile and deploy.
-However I got stuck up to a given point by a configuration glitch   under Settings/General:
-- the "Repository name" was set to  `ai4netlab`, which would have rendered as [https://ai4netlab.github.io/ai4netlab]([https://ai4netlab.github.io/ai4netlab] and not
- [https://ai4netlab.github.io/]([https://ai4netlab.github.io/).
+While the default actions do not work for me (murphy), after many attempts (in one rainy weekend day) I made it work to automatically compile and deploy.
+
+For troubleshooting, at some point I got stuck  by a configuration glitch   under Settings/General:
+- the "Repository name" was set to  `ai4netlab`, which would have rendered as [https://ai4netlab.github.io/ai4netlab](https://ai4netlab.github.io/ai4netlab) and not
+ [https://ai4netlab.github.io/](https://ai4netlab.github.io/).
 - this has been fixed by using the full CNAME path  `ai4netlab.github.io`  as "Repository name" 
   (intitially I was mislead as this being a non-fixablle issue by	https://github.com/actions/deploy-pages/issues/73)
 
-## Working action
+## Working GitHub action
 
 the working Action for me is now stored under `.github/workflows/jekyll-docker.yml` and is:
 
