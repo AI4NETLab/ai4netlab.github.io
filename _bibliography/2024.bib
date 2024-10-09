@@ -1,3 +1,56 @@
+
+@article{CoNEXT-24a,
+  author = {Azorin, Raphael and Monterubbiano, Andrea and Castellano, Gabriele and Gallo, Massimo and Pontarelli, Salvatore and Rossi, Dario},
+  title = {Taming the Elephants: Affordable Flow Length Prediction in the Data Plane},
+  year = {2024},
+  issue_date = {March 2024},
+  howpublished = {https://doi.org/10.1145/3649473},
+  doi = {10.1145/3649473},
+  abstract = {Machine Learning (ML) shows promising potential for enhancing networking tasks by providing early traffic predictions. However, implementing an ML-enabled system is a challenging task due to network devices limited resources. While previous works have shown the feasibility of running simple ML models in the data plane, integrating them into a practical end-to-end system is not an easy task. It requires addressing issues related to resource management and model maintenance to ensure that the performance improvement justifies the system overhead. In this work, we propose DUMBO, a versatile end-to-end system to generate and exploit early flow size predictions at line rate. Our system seamlessly integrates and maintains a simple ML model that offers early coarse-grain flow size prediction in the data plane. We evaluate the proposed system on flow scheduling, per-flow packet inter-arrival time distribution, and flow size estimation using real traffic traces, and perform experiments using an FPGA prototype running on an AMD(R)-Xilinx(R) Alveo U280 SmartNIC. Our results show that DUMBO outperforms traditional state-of-the-art approaches by equipping network devices data planes with a lightweight ML model. Code is available at https://github.com/cpt-harlock/DUMBO.},
+  journal = {Proc. of CoNEXT'24 (PACMNET).},
+  articleno = {5},
+  numpages = {24},
+  keywords = {data plane, in-network machine learning, per-flow monitoring}
+}
+
+
+
+@article{TNSM-24b,
+  author = {Gioacchini, Luca and Mellia, Marco and Vassio, Luca and Drago, Idilio and Milan, Giulia and Houidi, Zied Ben and Rossi, Dario},
+  journal = {IEEE Transactions on Network and Service Management},
+  title = {Cross-Network Embeddings Transfer for Traffic Analysis},
+  month = jun,
+  year = {2024},
+  volume = {21},
+  number = {3},
+  pages = {2686-2699},
+  doi = {10.1109/TNSM.2023.3329442},
+  howpublished = {https://ieeexplore.ieee.org/abstract/document/10304313}
+}
+
+@article{arxiv:2405.02649,
+  author = { Gioacchini, Luca and Drago, Idilio and Mellia, Marco and Houidi, Zied Ben and Rossi, Dario },
+  title = {Generic Multi-modal Representation Learning for Network Traffic Analysis},
+  month="May",
+  year=2024,
+  howpublished = {https://arxiv.org/abs/2405.02649},
+  arxiv = {https://arxiv.org/abs/2405.02649},
+}
+
+
+@article{TNSM-24a,
+  author = {Bovenzi, Giampaolo and Nascita, Alfredo and Yang, Lixuan and Finamore, Alessandro and Aceto, Giuseppe and Ciuonzo, Domenico and Pescape, Antonio and Rossi, Dario},
+  journal = {IEEE Transactions on Network and Service Management},
+  title = {Benchmarking Class Incremental Learning in Deep Learning Traffic Classification},
+  year = {2024},
+  volume = {21},
+  month = feb,
+  number = {1},
+  pages = {51-69},
+  doi = {10.1109/TNSM.2023.3287430},
+  howpublished = {https://ieeexplore.ieee.org/abstract/document/10155294}
+}
+
 @inproceedings{PAM-24,
   title = {{Data Augmentation for Traffic Classification}},
   author = {Wang, Chao and Finamore, Alessandro and Pietro, Michiardi and Gallo, Massimo and Rossi, Dario},
@@ -6,20 +59,6 @@
   note = {bestpaperrunnerup},
   arxiv={https://arxiv.org/abs/2401.10754},
   howpublished={https://arxiv.org/abs/2401.10754},
-}
-
-@article{CoNEXT-24,
-author = {Azorin, Raphael and Monterubbiano, Andrea and Castellano, Gabriele and Gallo, Massimo and Pontarelli, Salvatore and Rossi, Dario},
-title = {Taming the Elephants: Affordable Flow Length Prediction in the Data Plane},
-year = {2024},
-issue_date = {March 2024},
-howpublished = {https://doi.org/10.1145/3649473},
-doi = {10.1145/3649473},
-abstract = {Machine Learning (ML) shows promising potential for enhancing networking tasks by providing early traffic predictions. However, implementing an ML-enabled system is a challenging task due to network devices limited resources. While previous works have shown the feasibility of running simple ML models in the data plane, integrating them into a practical end-to-end system is not an easy task. It requires addressing issues related to resource management and model maintenance to ensure that the performance improvement justifies the system overhead. In this work, we propose DUMBO, a versatile end-to-end system to generate and exploit early flow size predictions at line rate. Our system seamlessly integrates and maintains a simple ML model that offers early coarse-grain flow size prediction in the data plane. We evaluate the proposed system on flow scheduling, per-flow packet inter-arrival time distribution, and flow size estimation using real traffic traces, and perform experiments using an FPGA prototype running on an AMD(R)-Xilinx(R) Alveo U280 SmartNIC. Our results show that DUMBO outperforms traditional state-of-the-art approaches by equipping network devices data planes with a lightweight ML model. Code is available at https://github.com/cpt-harlock/DUMBO.},
-journal = {Proc. of CoNEXT'24 (PACMNET).},
-articleno = {5},
-numpages = {24},
-keywords = {data plane, in-network machine learning, per-flow monitoring}
 }
 
 @article{COMNET-24,
