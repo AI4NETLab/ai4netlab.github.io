@@ -11,6 +11,10 @@ permalink: "/events"
 
 # 2025 
 
+{% bibliography --file events2026.bib --template eventbib %}
+
+# 2025 
+
 {% bibliography --file events2025.bib --template eventbib %}
 
 # 2024
