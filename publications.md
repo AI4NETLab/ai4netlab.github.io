@@ -18,8 +18,9 @@ permalink: "/publications"
 <!-- <button class="btn badge btn-default btn-xs">-->
 {%- for year in (2020..2026) reversed -%} [{{ year }}](#publications{{year}})<span class="caret"></span> / {% endfor %}  [{{ 2019 }}](#publications2019) 
 
-{%- for year in (2020..2026) reversed -%}  ## <A name="publications[{{ year }}"></a>{{ year }} <span class="badge">  {%   bibliography --file {{ year }}  --template bib  %}  {% endfor %}
 
+## <A name="publications2026"></a>2026 <span class="badge">  
+{% bibliography --file 2026 --template bib  %}
 
 ## <A name="publications2025"></a>2025 <span class="badge">  
 {% bibliography --file 2025 --template bib  %}
