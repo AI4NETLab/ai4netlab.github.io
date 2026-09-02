@@ -9,6 +9,10 @@ permalink: "/events"
 **Legend**: 
 <span class="badge badge-pill btn-success" style="width: {{ badgeWidth }}"> Events organization </span>  <span class="badge badge-pill btn-primary" style="width: {{ badgeWidth }}"> Talks at events </span> (*note: see also [conference talks](publications)*) 
 
+# 2027
+
+{% bibliography --file events2027.bib --template eventbib %}
+
 # 2026
 
 {% bibliography --file events2026.bib --template eventbib %}
